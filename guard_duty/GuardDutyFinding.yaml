@@ -15,7 +15,7 @@ Resources:
   EventRuleGuardDutyFinding:
     Type: AWS::Events::Rule
     Properties:
-      Description: Notification rule：DuardDuty Finding
+      Description: Notification rule：GuardDuty Finding
       EventBusName: !Ref EventBridgeName
       EventPattern:
         detail-type:
