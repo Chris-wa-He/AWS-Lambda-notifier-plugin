@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: "Guard Duty Finding rule for Event Bridge plugin."
 
 Parameters:
-  EventBridgeName:
+  EventBusNamePar:
     Type: String
     Default: "default"
-    Description: "Event bridge name."
+    Description: "Event Bus name."
 
   SnsArn:
     Type: String
@@ -16,7 +16,7 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       Description: Notification rule：GuardDuty Finding
-      EventBusName: !Ref EventBridgeName
+      EventBusName: !Ref EventBusNamePar
       EventPattern:
         detail-type:
           - GuardDuty Finding
